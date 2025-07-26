@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Programas de Estudio - Mi Universidad</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div th:replace="fragments/_navbar :: main-navbar"></div>
+
+<div class="container mt-4">
+    <h1 class="mb-4">Nuestros Programas de Estudio</h1>
+    <p class="lead">Ofrecemos una amplia gama de programas de grado y posgrado diseñados para preparar a nuestros estudiantes para los desafíos del mundo moderno.</p>
+    <hr>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ingeniería de Software</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Grado / 4 años</h6>
+                    <p class="card-text">Formamos ingenieros con sólidas bases en desarrollo, diseño y gestión de proyectos de software, capaces de crear soluciones innovadoras.</p>
+                    <ul>
+                        <li>Desarrollo Web Full Stack</li>
+                        <li>Inteligencia Artificial y Machine Learning</li>
+                        <li>Ciberseguridad</li>
+                    </ul>
+                    <a href="#" class="card-link">Ver plan de estudios</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Licenciatura en Administración de Empresas</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Grado / 4 años</h6>
+                    <p class="card-text">Preparamos líderes empresariales con una visión estratégica y habilidades de gestión, marketing y finanzas para cualquier sector.</p>
+                    <ul>
+                        <li>Gestión Estratégica</li>
+                        <li>Marketing Digital</li>
+                        <li>Finanzas Corporativas</li>
+                    </ul>
+                    <a href="#" class="card-link">Ver plan de estudios</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Licenciatura en Psicología</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Grado / 4 años</h6>
+                    <p class="card-text">Explora la mente humana y el comportamiento, preparándote para carreras en psicología clínica, educativa, organizacional y social.</p>
+                    <ul>
+                        <li>Psicología Clínica</li>
+                        <li>Neuropsicología</li>
+                        <li>Psicología Organizacional</li>
+                    </ul>
+                    <a href="#" class="card-link">Ver plan de estudios</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Diseño Gráfico y Multimedia</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Grado / 4 años</h6>
+                    <p class="card-text">Desarrolla tu creatividad y habilidades técnicas para comunicar ideas visualmente en medios impresos, digitales y audiovisuales.</p>
+                    <ul>
+                        <li>Diseño de Interfaces (UI/UX)</li>
+                        <li>Animación 2D/3D</li>
+                        <li>Fotografía y Edición</li>
+                    </ul>
+                    <a href="#" class="card-link">Ver plan de estudios</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="mt-4 text-center">Para más información sobre admisiones y otros programas, no dudes en contactarnos.</p>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

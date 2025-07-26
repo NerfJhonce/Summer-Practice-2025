@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Profesores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div th:replace="fragments/_navbar :: main-navbar"></div>
+
+<div class="container mt-4">
+    <h2>Listado de Profesores</h2>
+
+    <a th:href="@{/admin/profesores/nuevo}" class="btn btn-primary mb-3">Añadir Nuevo Profesor</a>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Departamento</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="profesor : ${profesores}">
+            <td th:text="${profesor.id}"></td>
+            <td th:text="${profesor.nombre}"></td>
+            <td th:text="${profesor.apellido}"></td>
+            <td th:text="${profesor.email}"></td>
+            <td th:text="${profesor.departamento}"></td>
+            <td>
+                <a th:href="@{/admin/profesores/editar/{id}(id=${profesor.id})}" class="btn btn-sm btn-info">Editar</a>
+                <form th:action="@{/admin/profesores/eliminar/{id}(id=${profesor.id})}" method="post" style="display:inline;">
+                    <input type="hidden" name="_method" value="delete" />
+                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de que quieres eliminar este profesor?');">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

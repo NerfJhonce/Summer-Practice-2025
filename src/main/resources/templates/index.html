@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Mi Universidad</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}"> </head>
+<body>
+
+<div th:replace="fragments/_navbar :: main-navbar"></div>
+
+<div class="container mt-5 text-center">
+    <h1 class="display-4">¡Bienvenido a Mi Universidad!</h1>
+    <p class="lead">Tu futuro comienza aquí.</p>
+    <hr class="my-4">
+    <p>Explora nuestros programas, conoce nuestra historia y contáctanos para más información.</p>
+    <a class="btn btn-primary btn-lg me-2" th:href="@{/programas-estudio}" role="button">Ver Programas</a>
+    <a class="btn btn-secondary btn-lg" th:href="@{/acerca-de}" role="button">Conócenos</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> </body>
+</html>

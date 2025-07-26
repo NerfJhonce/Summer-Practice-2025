@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}"></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div th:replace="fragments/_navbar :: main-navbar"></div>
+
+<div class="container mt-4">
+    <h2 th:text="${titulo}"></h2>
+    <form th:action="@{/admin/cursos}" th:object="${curso}" method="post">
+        <input type="hidden" th:field="*{id}" />
+
+        <div class="form-group">
+            <label for="nombre">Nombre del Curso/Programa:</label>
+            <input type="text" id="nombre" th:field="*{nombre}" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" th:field="*{descripcion}" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="creditos">Créditos:</label>
+            <input type="number" id="creditos" th:field="*{creditos}" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Guardar Curso/Programa</button>
+        <a th:href="@{/admin/cursos}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+</body>
+</html>

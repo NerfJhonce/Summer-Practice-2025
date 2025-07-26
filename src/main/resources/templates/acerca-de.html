@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros - Mi Universidad</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div th:replace="fragments/_navbar :: main-navbar"></div>
+
+<div class="container mt-4">
+    <h1 class="mb-4">Acerca de Nuestra Universidad</h1>
+    <p>Somos una institución líder en educación superior, comprometida con la excelencia académica, la investigación innovadora y el desarrollo de profesionales éticos y competentes.</p>
+    <p>Fundada en [Año de Fundación], nuestra universidad se ha dedicado a fomentar un ambiente de aprendizaje dinámico y una cultura de curiosidad intelectual. Nos enorgullece nuestra diversa comunidad de estudiantes, profesores e investigadores, quienes juntos contribuyen a un entorno enriquecedor.</p>
+    <p>Nuestra misión es educar a las futuras generaciones, impulsar el conocimiento a través de la investigación y servir a la sociedad con soluciones innovadoras y un compromiso cívico.</p>
+    <h3>Valores Clave:</h3>
+    <ul>
+        <li>**Excelencia Académica:** Búsqueda constante de la calidad en la enseñanza y el aprendizaje.</li>
+        <li>**Innovación:** Fomento de la creatividad y la adaptación a los nuevos desafíos.</li>
+        <li>**Integridad:** Promoción de la honestidad, la ética y la responsabilidad.</li>
+        <li>**Inclusión:** Creación de un ambiente donde todos se sientan valorados y respetados.</li>
+        <li>**Impacto Social:** Contribución al bienestar y desarrollo de la comunidad.</li>
+    </ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
