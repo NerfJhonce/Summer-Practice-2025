@@ -20,7 +20,7 @@ public class AdminEstudianteController {
     @Autowired
     public AdminEstudianteController(EstudianteService estudianteService, CursoService cursoService) {
         this.estudianteService = estudianteService;
-        this.cursoService = cursoService; // Inicializar
+        this.cursoService = cursoService;
     }
 
     // LIST STUDENTS
@@ -58,7 +58,7 @@ public class AdminEstudianteController {
         return "admin/estudiantes/formulario";
     }
 
-    // ELIMINAR ESTUDIANTE (no cambia)
+    // ELIMINAR ESTUDIANTE
     @PostMapping("/eliminar/{id}")
     public String eliminarEstudiante(@PathVariable Long id, RedirectAttributes redirectAttributes) {
         estudianteService.eliminarEstudiante(id);

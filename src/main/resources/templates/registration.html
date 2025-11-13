@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro | Mi Universidad Web</title>
+</head>
+<body>
+
+<header>
+  <h1>Crear una Nueva Cuenta</h1>
+</header>
+
+<main>
+  <form th:action="@{/register}" th:object="${usuario}" method="post">
+
+    <div>
+      <label for="username">Nombre de Usuario:</label>
+      <input type="text"
+             id="username"
+             th:field="*{username}"
+             placeholder="Define tu nombre de usuario"
+             required>
+    </div>
+
+    <div>
+      <label for="password">Contraseña:</label>
+      <input type="password"
+             id="password"
+             th:field="*{password}"
+             placeholder="Crea una contraseña segura"
+             required>
+    </div>
+
+    <button type="submit">Registrarme</button>
+  </form>
+
+  <hr>
+
+  <p>¿Ya tienes una cuenta? <a th:href="@{/login}">Iniciar Sesión</a></p>
+
+</main>
+
+</body>
+</html>

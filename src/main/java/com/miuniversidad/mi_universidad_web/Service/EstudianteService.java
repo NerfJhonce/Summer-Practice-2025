@@ -1,7 +1,7 @@
-package com.miuniversidad.mi_universidad_web.Service; // CAMBIADO a 'Service' con 'S' mayúscula
+package com.miuniversidad.mi_universidad_web.Service;
 
-import com.miuniversidad.mi_universidad_web.Model.Estudiante; // IMPORT CAMBIADO a 'Model' con 'M' mayúscula
-import com.miuniversidad.mi_universidad_web.Repository.EstudianteRepository; // IMPORT CAMBIADO a 'Repository' con 'R' mayúscula
+import com.miuniversidad.mi_universidad_web.Model.Estudiante;
+import com.miuniversidad.mi_universidad_web.Repository.EstudianteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

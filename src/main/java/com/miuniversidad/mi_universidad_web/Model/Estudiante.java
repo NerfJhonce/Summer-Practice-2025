@@ -25,10 +25,10 @@ public class Estudiante {
     @Column(unique = true, nullable = false)
     private String email;
 
-    // CAMBIO IMPORTANTE AQUÍ: Relación Many-to-One con Curso
+
     @ManyToOne(fetch = FetchType.LAZY) // Muchos estudiantes pueden estar en un Curso
     @JoinColumn(name = "curso_id") // Columna en la tabla 'estudiantes' que guarda el ID del curso
     private Curso carrera; // Ahora 'carrera' es un objeto Curso
 
-    // Getter y Setters serán manejados por Lombok con @Data
+
 }

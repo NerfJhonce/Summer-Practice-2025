@@ -1,6 +1,6 @@
-package com.miuniversidad.mi_universidad_web.Repository; // Asegúrate que coincida con tu carpeta
+package com.miuniversidad.mi_universidad_web.Repository;
 
-import com.miuniversidad.mi_universidad_web.Model.Profesor; // Asegúrate que coincida con tu carpeta
+import com.miuniversidad.mi_universidad_web.Model.Profesor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

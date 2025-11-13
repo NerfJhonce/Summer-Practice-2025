@@ -20,8 +20,7 @@ public class Curso {
     private String nombre; // Ej: "Ingeniería Informática", "Diseño Gráfico"
 
     private String descripcion;
-    private int creditos; // Ej: 240 (para un programa completo) o 6 (para un curso individual)
+    private int creditos;
 
-    // Aquí podrías añadir relaciones si quisieras, por ejemplo,
-    // @ManyToOne o @OneToMany con Profesor o Estudiante, pero lo mantendremos simple por ahora.
+
 }

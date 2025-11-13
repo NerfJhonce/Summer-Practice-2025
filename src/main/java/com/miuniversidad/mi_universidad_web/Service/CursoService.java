@@ -1,7 +1,7 @@
-package com.miuniversidad.mi_universidad_web.Service; // Asegúrate que coincida con tu carpeta
+package com.miuniversidad.mi_universidad_web.Service;
 
-import com.miuniversidad.mi_universidad_web.Model.Curso; // Asegúrate que coincida con tu carpeta
-import com.miuniversidad.mi_universidad_web.Repository.CursoRepository; // Asegúrate que coincida con tu carpeta
+import com.miuniversidad.mi_universidad_web.Model.Curso;
+import com.miuniversidad.mi_universidad_web.Repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

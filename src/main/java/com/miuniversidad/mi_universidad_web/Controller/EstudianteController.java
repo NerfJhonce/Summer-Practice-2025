@@ -21,24 +21,19 @@ public class EstudianteController {
         this.estudianteService = estudianteService;
     }
 
-    // Endpoint para crear un nuevo estudiante
-    // POST http://localhost:8080/api/estudiantes
     @PostMapping
     public ResponseEntity<Estudiante> crearEstudiante(@RequestBody Estudiante estudiante) {
         Estudiante nuevoEstudiante = estudianteService.guardarEstudiante(estudiante);
         return new ResponseEntity<>(nuevoEstudiante, HttpStatus.CREATED);
     }
 
-    // Endpoint para obtener todos los estudiantes
-    // GET http://localhost:8080/api/estudiantes
     @GetMapping
     public ResponseEntity<List<Estudiante>> obtenerTodosLosEstudiantes() {
         List<Estudiante> estudiantes = estudianteService.obtenerTodosLosEstudiantes();
         return new ResponseEntity<>(estudiantes, HttpStatus.OK);
     }
 
-    // Endpoint para obtener un estudiante por su ID
-    // GET http://localhost:8080/api/estudiantes/{id}
+
     @GetMapping("/{id}")
     public ResponseEntity<Estudiante> obtenerEstudiantePorId(@PathVariable Long id) {
         Optional<Estudiante> estudiante = estudianteService.obtenerEstudiantePorId(id);
@@ -46,8 +41,7 @@ public class EstudianteController {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    // Endpoint para actualizar un estudiante existente
-    // PUT http://localhost:8080/api/estudiantes/{id}
+
     @PutMapping("/{id}")
     public ResponseEntity<Estudiante> actualizarEstudiante(@PathVariable Long id, @RequestBody Estudiante estudianteDetalles) {
         Optional<Estudiante> estudianteExistente = estudianteService.obtenerEstudiantePorId(id);
@@ -64,8 +58,7 @@ public class EstudianteController {
         }
     }
 
-    // Endpoint para eliminar un estudiante por su ID
-    // DELETE http://localhost:8080/api/estudiantes/{id}
+
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> eliminarEstudiante(@PathVariable Long id) {
         try {
